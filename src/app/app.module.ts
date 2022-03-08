@@ -11,6 +11,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DonationComponent } from './components/donation/donation.component';
 import {CategorieComponent} from "./components/categorie/categorie.component";
 import {AddCategorieComponent} from "./components/add-categorie/add-categorie.component";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {AddCategorieComponent} from "./components/add-categorie/add-categorie.co
         AppRoutingModule,
         HttpClientModule,
         ReactiveFormsModule,
-        FontAwesomeModule
+        FontAwesomeModule,
+        BrowserAnimationsModule
     ],
   providers: [],
   bootstrap: [AppComponent]
