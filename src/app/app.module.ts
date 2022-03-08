@@ -11,6 +11,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DonationComponent } from './components/donation/donation.component';
 import {CategorieComponent} from "./components/categorie/categorie.component";
 import {AddCategorieComponent} from "./components/add-categorie/add-categorie.component";
+import { MainNavigationComponent } from './components/main-navigation/main-navigation.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {AddCategorieComponent} from "./components/add-categorie/add-categorie.co
     UserComponent,
     DonationComponent,
     CategorieComponent,
-    AddCategorieComponent
+    AddCategorieComponent,
+    MainNavigationComponent
   ],
     imports: [
         BrowserModule,
