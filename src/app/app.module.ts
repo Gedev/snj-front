@@ -6,20 +6,20 @@ import { AppComponent } from './app.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { UserComponent } from './components/user/user.component';
 import {HttpClientModule} from "@angular/common/http";
-// import { CategorieComponent } from './components/categorie/categorie.component';
-// import { AddCategorieComponent } from './components/add-categorie/add-categorie.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DonationComponent } from './components/donation/donation.component';
+import {CategorieComponent} from "./components/categorie/categorie.component";
+import {AddCategorieComponent} from "./components/add-categorie/add-categorie.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
     UserComponent,
-    DonationComponent
-    // CategorieComponent,
-    // AddCategorieComponent
+    DonationComponent,
+    CategorieComponent,
+    AddCategorieComponent
   ],
     imports: [
         BrowserModule,
