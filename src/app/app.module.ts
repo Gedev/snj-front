@@ -12,6 +12,7 @@ import { DonationComponent } from './components/donation/donation.component';
 import {CategorieComponent} from "./components/categorie/categorie.component";
 import {AddCategorieComponent} from "./components/add-categorie/add-categorie.component";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MainNavigationComponent } from './components/main-navigation/main-navigation.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     UserComponent,
     DonationComponent,
     CategorieComponent,
-    AddCategorieComponent
+    AddCategorieComponent,
+    MainNavigationComponent
   ],
     imports: [
         BrowserModule,
