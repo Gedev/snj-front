@@ -1,1 +1,31 @@
 <p>Page des donations</p>
+<div class="d-flex">
+  <div class="col-4">
+    <!--div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="ID Donation" aria-label="idDonation" aria-describedby="basic-addon2">
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary" type="button">Rechercher</button>
+      </div>
+    </div-->
+
+    <button type="button" class="btn btn-secondary mt-2" (click)="getOne()">Toutes les donations</button>
+  </div>
+
+  <div class="mt-2 ps-2">
+    <label>Resultats: </label>
+  </div>
+
+  <div class="mt-2 ps-2">
+    <div *ngFor="let d of listDonation; let i = index">
+      ====== Donation {{ i }} ======
+      <ul>
+        <li>ID: {{ d.id }}</li>
+        <li>Title: {{ d.title }}</li>
+        <li>Amount: {{d.amount | currency:'EUR'}}</li>
+        <li>Quantity: {{ d.quantity }}</li>
+        <li>Donator: {{ d.donator.firstname }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+

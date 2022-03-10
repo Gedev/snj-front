@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import {DonationForm} from "../models/donation-form";
 import {Observable} from "rxjs";
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {Donation} from "../models/donation";
 
 @Injectable({
   providedIn: 'root'
@@ -14,5 +15,9 @@ export class DonationService {
 
   public postUser(toPost: DonationForm): Observable<DonationForm> {
     return this._donation.post(this._apiUrl, toPost) as Observable<DonationForm>;
+  }
+
+  public getAll() : Observable<[Donation]> {
+    return this._donation.get(this._apiUrl) as Observable<[Donation]>;
   }
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {DonationService} from "../../services/donation.service";
 import {User} from "../../models/user";
 import {Address} from "../../models/address";
+import {Donation} from "../../models/donation";
 
 @Component({
   selector: 'app-donation',
@@ -10,11 +11,34 @@ import {Address} from "../../models/address";
 })
 export class DonationComponent implements OnInit {
 
-  constructor(private dServ: DonationService) { }
+  listDonation: Donation[] = [];
+  found: Donation = {
+    id:"",
+    title:"",
+    amount:0,
+    hasCategory:false,
+    isCash:false,
+    quantity:0,
+    donator:{
+      id:0,
+      firstname:"",
+      address:{
+        country:"",
+        town:"",
+        street:"",
+        postCode:""
+      },
+      birthdate:new Date(),
+      lastname:""
+    }
+  };
+
+  constructor(private dServ: DonationService) {
+  }
 
   ngOnInit(): void {
     this.dServ.postUser({
-        id: "111222aaabbb",
+        id: Date.now().toString().trim(),
         title: "Donation depuis front",
         hasCategory: false,
         quantity: 0,
@@ -40,4 +64,11 @@ export class DonationComponent implements OnInit {
     });
   }
 
+  getOne() {
+    this.dServ.getAll().subscribe({
+      next: donations => this.listDonation = donations,
+      error: tempError => alert("Failed to get all Donations from DB"),
+      complete: () => console.log("getAll Succeded")
+    })
+  }
 }
