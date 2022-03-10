@@ -1,17 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import {CategorieService} from "../../services/categorie.service";
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
+import {CategoryService} from "../../services/category.service";
 import {Router} from "@angular/router";
 
 @Component({
-  selector: 'app-add-categorie',
-  templateUrl: './add-categorie.component.html',
-  styleUrls: ['./add-categorie.component.scss']
+  selector: 'app-update-category',
+  templateUrl: './update-category.component.html',
+  styleUrls: ['./update-category.component.scss']
 })
-export class AddCategorieComponent implements OnInit {
+export class UpdateCategoryComponent implements OnInit {
+
   categorieFormGroup : FormGroup;
   constructor(
-    private _sServ:CategorieService,
+    private _sServ:CategoryService,
     private route:Router,
     builer:FormBuilder) {
     this.categorieFormGroup=builer.group({
@@ -21,16 +22,15 @@ export class AddCategorieComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  addCategorie(){
+  updateCategorie(){
     if(this.categorieFormGroup.valid){
       const cat = this.categorieFormGroup.value;
-      this._sServ.postCategorie({
+      this._sServ.updateCategorie({
         name:cat.name
       })
         .subscribe({
           next:(inserted)=>{
-            this.route.navigate(['/categorie']);
+            this.route.navigate(['/category']);
           },
           error:(error)=>{console.log(error);} });
     }

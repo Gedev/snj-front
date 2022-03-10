@@ -1,19 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import {Categorie} from "../../models/categorie";
-import {CategorieService} from "../../services/categorie.service";
+import {Category} from "../../models/category";
+import {CategoryService} from "../../services/category.service";
 
 import { faTrashAlt } from '@fortawesome/free-regular-svg-icons';
 @Component({
-  selector: 'app-categorie',
-  templateUrl: './categorie.component.html',
-  styleUrls: ['./categorie.component.scss']
+  selector: 'app-category',
+  templateUrl: './category.component.html',
+  styleUrls: ['./category.component.scss']
 })
-export class CategorieComponent implements OnInit {
+export class CategoryComponent implements OnInit {
   trash=faTrashAlt;
 
-  listCategories: Categorie[] = [];
+  listCategories: Category[] = [];
 
-  constructor(private _sServ:CategorieService) { }
+  constructor(private _sServ:CategoryService) { }
 
   ngOnInit(): void {
     this.loadCategories()
