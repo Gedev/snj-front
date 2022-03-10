@@ -17,4 +17,7 @@ export class CategorieService {
   postCategorie(toPost: CategorieForm): Observable<Categorie> {
     return this._client.post(this._apiURL, toPost) as Observable<Categorie>;
   }
+  updateCategorie(toPost: CategorieForm): Observable<Categorie> {
+    return this._client.patch(this._apiURL+"/update", toPost) as Observable<Categorie>;
+  }
 }

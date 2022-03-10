@@ -6,11 +6,12 @@ import { AppComponent } from './app.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { UserComponent } from './components/user/user.component';
 import {HttpClientModule} from "@angular/common/http";
+import { CategorieComponent } from './components/categorie/categorie.component';
+import { AddCategorieComponent } from './components/add-categorie/add-categorie.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DonationComponent } from './components/donation/donation.component';
-import {CategorieComponent} from "./components/categorie/categorie.component";
-import {AddCategorieComponent} from "./components/add-categorie/add-categorie.component";
+import { UpdateCategorieComponent } from './components/update-categorie/update-categorie.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainNavigationComponent } from './components/main-navigation/main-navigation.component';
 import {MatMenuModule} from "@angular/material/menu";
@@ -23,6 +24,7 @@ import {MatButtonModule} from "@angular/material/button";
     HomepageComponent,
     UserComponent,
     DonationComponent,
+    UpdateCategorieComponent,
     CategorieComponent,
     AddCategorieComponent,
     MainNavigationComponent
