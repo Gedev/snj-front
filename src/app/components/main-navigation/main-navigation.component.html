@@ -1,0 +1,32 @@
+<nav class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+  <a routerLink="" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+    <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+    <span class="fs-4">Sauvons nos jeunes</span>
+  </a>
+
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a routerLink="" class="nav-link" aria-current="page">Accueil</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/#" class="nav-link" aria-current="page">Liste des Projets</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/donation" class="nav-link" aria-current="page">Donations</a>
+    </li>
+    <li>
+      <button mat-button [matMenuTriggerFor]="users">Utilisateurs</button>
+      <mat-menu #users="matMenu">
+        <button mat-menu-item routerLink="/user">Liste des utilisateurs</button>
+        <button mat-menu-item routerLink="/#">Ajouter utilisateurs</button>
+      </mat-menu>
+    </li>
+    <li>
+    <button mat-button [matMenuTriggerFor]="categories">Catégories</button>
+    <mat-menu #categories="matMenu">
+      <button mat-menu-item routerLink="/categorie">Liste des Catégories</button>
+      <button mat-menu-item routerLink="/addCategorie">Ajouter catégorie</button>
+    </mat-menu>
+    </li>
+  </ul>
+</nav>
