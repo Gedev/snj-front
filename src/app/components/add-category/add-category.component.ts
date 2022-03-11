@@ -9,12 +9,12 @@ import {Router} from "@angular/router";
   styleUrls: ['./add-category.component.scss']
 })
 export class AddCategoryComponent implements OnInit {
-  categorieFormGroup : FormGroup;
+  categoryFormGroup : FormGroup;
   constructor(
     private _sServ:CategoryService,
     private route:Router,
     builer:FormBuilder) {
-    this.categorieFormGroup=builer.group({
+    this.categoryFormGroup=builer.group({
       'name':new FormControl(null,[Validators.minLength(2),Validators.required])
     });
   }
@@ -23,9 +23,9 @@ export class AddCategoryComponent implements OnInit {
   }
 
   addCategorie(){
-    if(this.categorieFormGroup.valid){
-      const cat = this.categorieFormGroup.value;
-      this._sServ.postCategorie({
+    if(this.categoryFormGroup.valid){
+      const cat = this.categoryFormGroup.value;
+      this._sServ.postCategory({
         name:cat.name
       })
         .subscribe({
