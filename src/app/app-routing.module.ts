@@ -3,15 +3,17 @@ import { RouterModule, Routes } from '@angular/router';
 import {HomepageComponent} from "./components/homepage/homepage.component";
 import {UserComponent} from "./components/user/user.component";
 import {DonationComponent} from "./components/donation/donation.component";
-import {AddCategorieComponent} from "./components/add-categorie/add-categorie.component";
-import {CategorieComponent} from "./components/categorie/categorie.component";
+import {AddCategoryComponent} from "./components/add-category/add-category.component";
+import {CategoryComponent} from "./components/category/category.component";
+import {UpdateCategoryComponent} from "./components/update-category/update-category.component";
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
   { path: 'user', component: UserComponent },
   { path: 'donation', component: DonationComponent},
-  { path: 'categorie', component: CategorieComponent },
-  { path: 'addCategorie', component: AddCategorieComponent },
+   { path: 'category', component: CategoryComponent },
+   { path: 'addCategory', component: AddCategoryComponent },
+  { path: 'updateCategory', component: UpdateCategoryComponent }
 ];
 
 @NgModule({
