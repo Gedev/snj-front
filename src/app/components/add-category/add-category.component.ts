@@ -8,8 +8,11 @@ import {Router} from "@angular/router";
   templateUrl: './add-category.component.html',
   styleUrls: ['./add-category.component.scss']
 })
+
 export class AddCategoryComponent implements OnInit {
+
   categoryFormGroup : FormGroup;
+
   constructor(
     private _sServ:CategoryService,
     private route:Router,
@@ -22,7 +25,7 @@ export class AddCategoryComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addCategorie(){
+  addCategory(){
     if(this.categoryFormGroup.valid){
       const cat = this.categoryFormGroup.value;
       this._sServ.postCategory({

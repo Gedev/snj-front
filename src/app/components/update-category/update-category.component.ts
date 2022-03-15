@@ -10,14 +10,16 @@ import {Category} from "../../models/category";
   styleUrls: ['./update-category.component.scss']
 })
 export class UpdateCategoryComponent implements OnInit {
+
   idCategory:Category|undefined;
   categoryFormGroup : FormGroup;
+
   constructor(
     private _sServ:CategoryService,
     private route:Router,
     private builer:FormBuilder) {
-    this.categoryFormGroup=builer.group({
-      'name':new FormControl(this.idCategory?.name.toString(),[Validators.minLength(2),Validators.required])
+      this.categoryFormGroup=builer.group({
+        'name':new FormControl(this.idCategory?.name.toString(),[Validators.minLength(2),Validators.required])
     });
   }
 
