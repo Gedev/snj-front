@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {DonationForm} from "../models/donation-form";
+import {DonationForm} from "../models/forms/donation-form";
 import {Observable} from "rxjs";
 import {HttpClient, HttpHeaders, HttpParams} from "@angular/common/http";
 import {Donation} from "../models/donation";

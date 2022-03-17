@@ -1,7 +1,6 @@
-import {User} from "./user";
+import {User} from "../user";
 
 export interface DonationForm {
-  id: string;
   title: string;
   hasCategory: boolean;
   quantity: number;
