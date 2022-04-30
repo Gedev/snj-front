@@ -32,4 +32,7 @@ export class CategoryService {
   setCurrentCategory(value: Category|undefined) {
     this._category = value;
   }
+  deleteCategory(id:string): Observable<Category> {
+    return this._client.delete(this._apiURL+"/delete?id="+id) as Observable<Category>;
+  }
 }
