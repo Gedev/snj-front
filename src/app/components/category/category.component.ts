@@ -34,4 +34,13 @@ export class CategoryComponent implements OnInit {
     this._sServ.setCurrentCategory(currentCategory);
     this.route.navigate(['/updateCategory']);
   }
+  deleteCategory(id:string){
+    alert(id);
+    this._sServ.deleteCategory(id)
+      .subscribe({
+        next:(inserted)=>{
+          window.location.reload();
+        },
+        error:(error)=>{console.log(error);} });
+  }
 }

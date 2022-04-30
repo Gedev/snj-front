@@ -17,7 +17,7 @@
             </a>
           </li>
           <li class="list-group-item listButton">
-            <a routerLink="#" class="text-danger" title="supprimer">
+            <a routerLink="#" (click)="deleteCategory(c.id)" class="text-danger" title="supprimer">
               <fa-icon [icon]="trash"></fa-icon>
             </a>
           </li>
