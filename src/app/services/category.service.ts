@@ -15,9 +15,11 @@ export class CategoryService {
   getAll(): Observable<Category[]> {
     return this._client.get(this._apiURL) as Observable<Category[]>
   }
+
   postCategory(toPost: CategoryForm): Observable<Category> {
     return this._client.post(this._apiURL, toPost) as Observable<Category>;
   }
+
   updateCategory(id:string|undefined, toPost:CategoryForm): Observable<Category> {
 
     const param = new HttpParams()
@@ -25,6 +27,7 @@ export class CategoryService {
 
     return this._client.patch(this._apiURL+"/update", toPost,{params:param}) as Observable<Category>;
   }
+
   getCurrentCategory(): Category | undefined {
     return this._category;
   }

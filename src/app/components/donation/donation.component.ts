@@ -14,7 +14,7 @@ export class DonationComponent implements OnInit {
 
   ngOnInit(): void {
     this.dServ.postUser({
-        id: "111222aaabbb",
+        id: 1,
         title: "Donation depuis front",
         hasCategory: false,
         quantity: 0,

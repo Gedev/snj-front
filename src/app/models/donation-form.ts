@@ -1,7 +1,7 @@
 import {User} from "./user";
 
 export interface DonationForm {
-  id: string;
+  id: number;
   title: string;
   hasCategory: boolean;
   quantity: number;

@@ -17,6 +17,8 @@ import { MainNavigationComponent } from './components/main-navigation/main-navig
 import {MatMenuModule} from "@angular/material/menu";
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
+import { ProjectComponent } from './components/project/project.component';
+import { AddProjectComponent } from './components/project/add-project/add-project.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import {MatButtonModule} from "@angular/material/button";
     UpdateCategoryComponent,
     CategoryComponent,
     AddCategoryComponent,
-    MainNavigationComponent
+    MainNavigationComponent,
+    ProjectComponent,
+    AddProjectComponent
   ],
   imports: [
     BrowserModule,
